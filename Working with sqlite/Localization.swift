@@ -81,3 +81,14 @@ class Localization: NSObject {
         return localWordHash
     }
 }
+
+
+// MARK: String extension -> localized: String
+extension String {
+
+
+    /// return string from db by key
+    var localized: String {
+        return Localization.shared.stringForKey(self)
+    }
+}

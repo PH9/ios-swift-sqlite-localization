@@ -16,10 +16,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.keyTextField.text = "prepaid.registration.summary.title"
     }
 
     @IBAction func loadLabelClicked(sender: AnyObject) {
-        self.sampleLabel.text = Localization.shared.stringForKey(self.keyTextField.text!)
+        self.sampleLabel.text = self.keyTextField.text?.localized
     }
 
     @IBAction func onSegmentChanged(sender: UISegmentedControl) {
@@ -37,7 +39,4 @@ class ViewController: UIViewController {
             break
         }
     }
-
-
 }
-
