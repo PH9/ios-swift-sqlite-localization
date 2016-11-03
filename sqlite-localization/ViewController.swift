@@ -10,16 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var keyTextField: UITextField!
+    @IBOutlet weak var sampleLabel: UILabel!
+    @IBOutlet weak var helperLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.keyTextField.text = "prepaid.registration.summary.title"
+        self.helperLabel.text = String(
+            format: "%@\n%@\n%@",
+            "- Change segment control to select language.",
+            "- Reload label value from db by click load button.",
+            "- To look for keys please see in sample.sqlite file."
+        )
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onSegmentChanged(sender: UISegmentedControl) {
     }
 
-
+    @IBAction func onLoadButtonClicked(sender: AnyObject) {
+    }
 }
-
