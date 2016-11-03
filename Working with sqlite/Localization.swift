@@ -14,6 +14,8 @@ class Localization: NSObject {
     private var wordHash: [String: String] = [:]
     var currentLanguage: String = "th"
 
+    static var shared: Localization = Localization()
+
     let KEY = "ui_key"
 
     override init() {
