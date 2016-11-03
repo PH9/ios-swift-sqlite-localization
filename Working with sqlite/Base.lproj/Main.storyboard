@@ -27,13 +27,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81Y-bE-RfX">
+                                <rect key="frame" x="76.5" y="285" width="222" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="koc-dk-w9i"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKy-iq-gk3">
+                                <rect key="frame" x="120" y="364" width="134" height="30"/>
+                                <state key="normal" title="Load label from key"/>
+                                <connections>
+                                    <action selector="loadLabelClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N6f-CQ-Zwi"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4LX-jk-Mu9">
+                                <rect key="frame" x="80.5" y="249" width="215" height="29"/>
+                                <segments>
+                                    <segment title="Thai"/>
+                                    <segment title="English"/>
+                                    <segment title="Chainese"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Lc8-AN-Hgx"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UKy-iq-gk3" firstAttribute="top" secondItem="ETq-pM-95K" secondAttribute="bottom" constant="20" id="1f6-Cj-h7G"/>
+                            <constraint firstItem="81Y-bE-RfX" firstAttribute="centerX" secondItem="ETq-pM-95K" secondAttribute="centerX" id="50g-fn-WTb"/>
+                            <constraint firstItem="4LX-jk-Mu9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ajk-0b-6PV"/>
+                            <constraint firstItem="81Y-bE-RfX" firstAttribute="top" secondItem="4LX-jk-Mu9" secondAttribute="bottom" constant="8" id="dCA-3z-TSu"/>
+                            <constraint firstItem="UKy-iq-gk3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eGi-G7-iMr"/>
                             <constraint firstItem="ETq-pM-95K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXX-q9-Mxx"/>
                             <constraint firstItem="ETq-pM-95K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jhy-I0-W9O"/>
+                            <constraint firstItem="ETq-pM-95K" firstAttribute="top" secondItem="81Y-bE-RfX" secondAttribute="bottom" constant="8" id="pSu-X7-Cx8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="keyTextField" destination="81Y-bE-RfX" id="qPd-9P-ie0"/>
+                        <outlet property="sampleLabel" destination="ETq-pM-95K" id="2Qw-qH-64a"/>
+                        <outlet property="segmentControl" destination="4LX-jk-Mu9" id="R5S-lG-akt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

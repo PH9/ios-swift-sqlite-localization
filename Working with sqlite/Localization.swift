@@ -7,24 +7,75 @@
 //
 
 import Foundation
+import FMDB
 
 class Localization: NSObject {
 
-    var wordHash: [String: String] = [:]
+    private var wordHash: [String: String] = [:]
     var currentLanguage: String = "th"
+
+    let KEY = "ui_key"
 
     override init() {
         super.init()
-        self.load(language: self.currentLanguage)
+        self.wordHash = self.load(language: self.currentLanguage)
     }
 
     init(language: String) {
         super.init()
         self.currentLanguage = language
-        self.load(language: self.currentLanguage)
+        self.wordHash = self.load(language: self.currentLanguage)
     }
 
-    private func load(language: String) {
+    func stringForKey(key: String) -> String {
+        return self.stringForKey(key, default: key)
+    }
 
+    func stringForKey(key: String, default defaultString: String) -> String {
+        return self.wordHash[key] ?? defaultString
+    }
+
+    func switchToLanguage(language: String) {
+        if self.currentLanguage == language {
+            return
+        }
+
+        self.currentLanguage = language
+        self.wordHash = self.load(language: self.currentLanguage )
+    }
+
+    private func load(language language: String) -> [String: String] {
+        let filePath = NSBundle.mainBundle().pathForResource("dtacOne.sqlite", ofType: nil)
+
+        guard let database = FMDatabase(path: filePath) else {
+            print("unable to create database")
+            return self.wordHash
+        }
+
+        guard database.open() else {
+            print("Unable to open database")
+            return self.wordHash
+        }
+
+        var localWordHash: [String: String] = [:]
+        do {
+            let rs = try database.executeQuery("select \(KEY), \(currentLanguage) from messages", values: nil)
+            while rs.next() {
+                guard let key = rs.stringForColumn(self.KEY) else {
+                    continue
+                }
+
+                guard let value = rs.stringForColumn(self.currentLanguage) else {
+                    continue
+                }
+
+                localWordHash[key] = value
+            }
+        } catch {
+            return self.wordHash
+        }
+        
+        database.close()
+        return localWordHash
     }
 }
