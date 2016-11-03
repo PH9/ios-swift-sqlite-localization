@@ -27,8 +27,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onSegmentChanged(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            Localization.shared.switchToLanguage("th")
+            break
+        case 1:
+            Localization.shared.switchToLanguage("en")
+            break
+        case 2:
+            Localization.shared.switchToLanguage("ch")
+            break
+        default:
+            break
+        }
     }
 
     @IBAction func onLoadButtonClicked(sender: AnyObject) {
+        self.sampleLabel.text = self.keyTextField.text?.localized
     }
 }
