@@ -1,0 +1,6 @@
+framework module SqliteLocalization {
+  umbrella header "SqliteLocalization-umbrella.h"
+
+  export *
+  module * { export * }
+}

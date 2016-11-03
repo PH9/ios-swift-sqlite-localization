@@ -1,0 +1,6 @@
+framework module Pods_SqliteLocalization_Example {
+  umbrella header "Pods-SqliteLocalization_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

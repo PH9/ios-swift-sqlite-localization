@@ -1,0 +1,16 @@
+PODS:
+  - SqliteLocalization (0.1.0)
+
+DEPENDENCIES:
+  - SqliteLocalization (from `../`)
+
+EXTERNAL SOURCES:
+  SqliteLocalization:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SqliteLocalization: c1e0cc3820b8d3e3e168f38401227eec32f900ed
+
+PODFILE CHECKSUM: 2403cad6a34c74a9223fc5fd0d6db9f0a52fbe31
+
+COCOAPODS: 1.1.1
