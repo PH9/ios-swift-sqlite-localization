@@ -9,22 +9,17 @@
 import Foundation
 import FMDB
 
-class Localization: NSObject {
+class Localization {
 
     private var wordHash: [String: String] = [:]
-    var currentLanguage: String = "th"
+    private let sqlitePath: String
+    private let KEY = "ui_key"
+    private(set) internal var currentLanguage: String
 
-    static var shared: Localization = Localization()
+    static var shared: Localization!
 
-    let KEY = "ui_key"
-
-    override init() {
-        super.init()
-        self.wordHash = self.load(language: self.currentLanguage)
-    }
-
-    init(language: String) {
-        super.init()
+    init(sqlitePath: String, language: String) {
+        self.sqlitePath = sqlitePath
         self.currentLanguage = language
         self.wordHash = self.load(language: self.currentLanguage)
     }
@@ -47,9 +42,7 @@ class Localization: NSObject {
     }
 
     private func load(language language: String) -> [String: String] {
-        let filePath = NSBundle.mainBundle().pathForResource("dtacOne.sqlite", ofType: nil)
-
-        guard let database = FMDatabase(path: filePath) else {
+        guard let database = FMDatabase(path: self.sqlitePath) else {
             print("unable to create database")
             return self.wordHash
         }
@@ -85,7 +78,6 @@ class Localization: NSObject {
 
 // MARK: String extension -> localized: String
 extension String {
-
 
     /// return string from db by key
     var localized: String {
