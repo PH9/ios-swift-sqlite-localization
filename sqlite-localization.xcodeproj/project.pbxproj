@@ -12,6 +12,7 @@
 		6524C82F1DCB23F300E868F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6524C82D1DCB23F300E868F3 /* Main.storyboard */; };
 		6524C8311DCB23F300E868F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8301DCB23F300E868F3 /* Assets.xcassets */; };
 		6524C8341DCB23F300E868F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8321DCB23F300E868F3 /* LaunchScreen.storyboard */; };
+		6532FD711DCB25FB006EE070 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FD701DCB25FB006EE070 /* Localization.swift */; };
 		D07E6696BDA71FDED22F30E3 /* Pods_sqlite_localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050F21967061ABAFD8C44B81 /* Pods_sqlite_localization.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		6524C8301DCB23F300E868F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6524C8331DCB23F300E868F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6524C8351DCB23F300E868F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6532FD701DCB25FB006EE070 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		F4A9DF6D091ABCF29C5CF539 /* Pods-sqlite-localization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sqlite-localization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				6524C8301DCB23F300E868F3 /* Assets.xcassets */,
 				6524C8321DCB23F300E868F3 /* LaunchScreen.storyboard */,
 				6524C8351DCB23F300E868F3 /* Info.plist */,
+				6532FD701DCB25FB006EE070 /* Localization.swift */,
 			);
 			path = "sqlite-localization";
 			sourceTree = "<group>";
@@ -186,7 +189,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B1BAA2AD5CCB26C19EF0C2BE /* [CP] Copy Pods Resources */ = {
@@ -213,6 +216,7 @@
 			files = (
 				6524C82C1DCB23F300E868F3 /* ViewController.swift in Sources */,
 				6524C82A1DCB23F300E868F3 /* AppDelegate.swift in Sources */,
+				6532FD711DCB25FB006EE070 /* Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +380,7 @@
 				6524C83A1DCB23F300E868F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
