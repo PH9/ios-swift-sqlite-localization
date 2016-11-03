@@ -12,9 +12,12 @@
 		6524C82F1DCB23F300E868F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6524C82D1DCB23F300E868F3 /* Main.storyboard */; };
 		6524C8311DCB23F300E868F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8301DCB23F300E868F3 /* Assets.xcassets */; };
 		6524C8341DCB23F300E868F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8321DCB23F300E868F3 /* LaunchScreen.storyboard */; };
+		D07E6696BDA71FDED22F30E3 /* Pods_sqlite_localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050F21967061ABAFD8C44B81 /* Pods_sqlite_localization.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03B6F4BA2533F3D52DED05BA /* Pods-sqlite-localization.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sqlite-localization.release.xcconfig"; path = "Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization.release.xcconfig"; sourceTree = "<group>"; };
+		050F21967061ABAFD8C44B81 /* Pods_sqlite_localization.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sqlite_localization.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6524C8261DCB23F300E868F3 /* sqlite-localization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sqlite-localization.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6524C8291DCB23F300E868F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6524C82B1DCB23F300E868F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6524C8301DCB23F300E868F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6524C8331DCB23F300E868F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6524C8351DCB23F300E868F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4A9DF6D091ABCF29C5CF539 /* Pods-sqlite-localization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sqlite-localization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07E6696BDA71FDED22F30E3 /* Pods_sqlite_localization.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6524C8281DCB23F300E868F3 /* sqlite-localization */,
 				6524C8271DCB23F300E868F3 /* Products */,
+				E8E577C77D2A3C8FA2364F43 /* Pods */,
+				E3AFE24B74321D21F65F1147 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = "sqlite-localization";
 			sourceTree = "<group>";
 		};
+		E3AFE24B74321D21F65F1147 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				050F21967061ABAFD8C44B81 /* Pods_sqlite_localization.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8E577C77D2A3C8FA2364F43 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4A9DF6D091ABCF29C5CF539 /* Pods-sqlite-localization.debug.xcconfig */,
+				03B6F4BA2533F3D52DED05BA /* Pods-sqlite-localization.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6524C8381DCB23F300E868F3 /* Build configuration list for PBXNativeTarget "sqlite-localization" */;
 			buildPhases = (
+				94C515CE25CEB4B3B2627ECB /* [CP] Check Pods Manifest.lock */,
 				6524C8221DCB23F300E868F3 /* Sources */,
 				6524C8231DCB23F300E868F3 /* Frameworks */,
 				6524C8241DCB23F300E868F3 /* Resources */,
+				14B13E534A1FA02E459CE45A /* [CP] Embed Pods Frameworks */,
+				B1BAA2AD5CCB26C19EF0C2BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B13E534A1FA02E459CE45A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94C515CE25CEB4B3B2627ECB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B1BAA2AD5CCB26C19EF0C2BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6524C8221DCB23F300E868F3 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		6524C8391DCB23F300E868F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4A9DF6D091ABCF29C5CF539 /* Pods-sqlite-localization.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sqlite-localization/Info.plist";
@@ -270,6 +346,7 @@
 		};
 		6524C83A1DCB23F300E868F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03B6F4BA2533F3D52DED05BA /* Pods-sqlite-localization.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "sqlite-localization/Info.plist";

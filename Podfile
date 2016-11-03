@@ -6,5 +6,6 @@ target 'sqlite-localization' do
   use_frameworks!
 
   # Pods for sqlite-localization
+  pod 'FMDB'
 
 end
