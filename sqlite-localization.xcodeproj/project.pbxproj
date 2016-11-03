@@ -13,6 +13,7 @@
 		6524C8311DCB23F300E868F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8301DCB23F300E868F3 /* Assets.xcassets */; };
 		6524C8341DCB23F300E868F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6524C8321DCB23F300E868F3 /* LaunchScreen.storyboard */; };
 		6532FD711DCB25FB006EE070 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6532FD701DCB25FB006EE070 /* Localization.swift */; };
+		656832AD1DCB2E7C003664E0 /* sample.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 656832AC1DCB2E7A003664E0 /* sample.sqlite */; };
 		D07E6696BDA71FDED22F30E3 /* Pods_sqlite_localization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 050F21967061ABAFD8C44B81 /* Pods_sqlite_localization.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		6524C8331DCB23F300E868F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6524C8351DCB23F300E868F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6532FD701DCB25FB006EE070 /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		656832AC1DCB2E7A003664E0 /* sample.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.sqlite; sourceTree = "<group>"; };
 		F4A9DF6D091ABCF29C5CF539 /* Pods-sqlite-localization.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sqlite-localization.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sqlite-localization/Pods-sqlite-localization.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 		6524C8281DCB23F300E868F3 /* sqlite-localization */ = {
 			isa = PBXGroup;
 			children = (
+				656832AC1DCB2E7A003664E0 /* sample.sqlite */,
 				6524C8291DCB23F300E868F3 /* AppDelegate.swift */,
 				6524C82B1DCB23F300E868F3 /* ViewController.swift */,
 				6524C82D1DCB23F300E868F3 /* Main.storyboard */,
@@ -156,6 +159,7 @@
 				6524C8341DCB23F300E868F3 /* LaunchScreen.storyboard in Resources */,
 				6524C8311DCB23F300E868F3 /* Assets.xcassets in Resources */,
 				6524C82F1DCB23F300E868F3 /* Main.storyboard in Resources */,
+				656832AD1DCB2E7C003664E0 /* sample.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
